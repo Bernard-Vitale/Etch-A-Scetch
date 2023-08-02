@@ -1,0 +1,85 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    user-select: none;
+}
+body{
+    background-image: linear-gradient(to right, rgb(102, 214, 168) , rgb(97, 90, 215));
+    height: 100%;
+}
+footer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+#mainContainer{
+    display: flex;
+    align-items: center;
+    margin: 4em;
+    flex-direction: column;
+}
+
+#title{
+    font-size: 4em;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+#contentContainer{
+    display: flex;
+    margin: 2em;
+    justify-content: center;
+    gap: 5em;
+    width: 100%;
+}
+#optionsContainer{
+    border: 2px solid black;
+    background-color: rgb(241, 234, 234);
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.71);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    height: 35em;
+    padding: 20px;
+}
+#sketchContainer{
+    border: 50px solid rgb(96, 91, 91);    
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.71);
+    border-radius: 20px;
+    width: 30em;
+    height: 30em;
+    display: grid;
+    cursor: crosshair;
+}
+button{
+    border-radius: 10px;
+    background-color:rgb(255, 255, 255);
+    width: 10em;
+    height: 2em;
+    font-size: 1em;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+#clearBtn:active, #toggleGridBtn:active{
+    background-color: rgb(92, 210, 166);
+}
+
+#sizeChangerContainer{
+    text-align: center;
+}
+
+#githubIcon{
+    height: 2em;
+}
+
+.gridCell {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(204, 204, 204);
+}
+.hideGridLines {
+    border: none;
+}

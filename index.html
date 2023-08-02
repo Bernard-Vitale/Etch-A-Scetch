@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/paint-icon.png">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div id="mainContainer">
+        <div id="titleContainer">
+            <h1 id="title">Etch-A-Sketch</h1>
+        </div>
+        <div id="contentContainer">
+            <div id="optionsContainer">
+                <button id="blackBtn">Black</button>
+                <button id="rainbowBtn">Rainbow</button>
+                <button id="eraserBtn">Eraser</button>
+                <button id="clearBtn">Clear</button>
+                <button id="toggleGridBtn">Toggle Grid</button>
+                <div id="sizeChangerContainer">
+                    <div id="sliderValue">16x16</div>
+                    <input type="range" min="5" max="50" value="16" id="sizeSlider">
+                </div>
+            </div>
+            <div id="sketchContainer">
+                <div id="grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <h3>Created by: Bernard-Vitale |</h3> 
+        <a target="_blank" href="https://github.com/Bernard-Vitale" title="Github" ><img id="githubIcon" src="images/github-icon.png"></a>
+    </footer>
+
+</body>
+</html>
