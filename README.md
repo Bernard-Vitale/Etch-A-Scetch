@@ -1,6 +1,6 @@
 # Etch-A-Sketch Website
 
-This project is a part of The Odin Project's curriculum. You can find the information about this specific assignment here:<b
+This project is a part of The Odin Project's curriculum. You can find the information about this specific assignment here:
 - [Etch-a-Sketch Assignment](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
 
 This website allows you to:
