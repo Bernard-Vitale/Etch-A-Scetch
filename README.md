@@ -5,10 +5,10 @@ This project is a part of The Odin Project's curriculum. You can find the inform
 
 This website allows you to:
 - Select any color you want to draw with.
-- Use "Rainbow Mode", which randomizes the color of every pixel you draw.
-- Use an Eraser to to erase the pixels you have already drawn.
+- "Rainbow Mode", which randomizes the color of every pixel you draw.
+- Use an Eraser to erase the pixels you have already drawn.
 - Clear the pixel grid completely and have a fresh start.
-- Toggle the grid lines.
+- Toggle the grid lines on and off.
 - Change the size of the grid, from a 5x5 up to a 50x50
 
 [Live Website](https://bernard-vitale.github.io/Etch-A-Sketch/)
