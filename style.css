@@ -101,8 +101,8 @@ button:hover, #colorSelecter:hover{
     gap: 5px;
 }
 #sizeSlider{
-    -webkit-appearance: none; /* For WebKit/Blink based browsers */
-    -moz-appearance: none; /* For Firefox */
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
     appearance: none;    background-color: rgb(250, 250, 250);
     border-radius: 10px;
     border: 1px solid black;
