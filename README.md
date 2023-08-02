@@ -1,6 +1,7 @@
-# Etch-A-Scetch Website
+# Etch-A-Sketch Website
 
-This project is a part of The Odin Project's curriculum. You can find the information about this specific assignment here: [Etch-a-Sketch Assignment](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
+This project is a part of The Odin Project's curriculum. You can find the information about this specific assignment here: 
+[Etch-a-Sketch Assignment](https://www.theodinproject.com/lessons/foundations-etch-a-sketch)
 
 This website allows you to:
 - Select any color you want to draw with.
