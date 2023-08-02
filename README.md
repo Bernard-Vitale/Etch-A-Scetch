@@ -7,7 +7,7 @@ This website allows you to:
 - Select any color you want to draw with.
 - Use "Rainbow Mode", which randomizes the color of every pixel you draw.
 - Use an Eraser to erase the pixels you have already drawn.
-- Use an eyedropper, to select the exact color of a pixel that is on the drawing.
+- Use an Eye Dropper Tool, to select the exact color of a pixel that is on the drawing.
 - Clear the pixel grid completely and have a fresh start.
 - Toggle the grid lines on and off.
 - Change the size of the grid, from a 5x5 up to a 50x50
