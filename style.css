@@ -4,7 +4,6 @@
 }
 body{
     background-color: rgb(152, 152, 152);
-    height: 100%;
 }
 footer{
     display: flex;
@@ -15,8 +14,9 @@ footer{
 #mainContainer{
     display: flex;
     align-items: center;
-    margin: 4em;
+    margin: 3em;
     margin-bottom: 1em;
+    height: 100%;
     flex-direction: column;
 }
 
