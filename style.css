@@ -41,7 +41,7 @@ footer{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
     height: 35em;
     padding: 35px;
 }
@@ -55,7 +55,7 @@ footer{
     cursor: crosshair;
 }
 
-#colorSelecterContainer{
+#colorSelectorContainer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,15 +65,15 @@ footer{
     margin: 0px;
     font-size: 1.3em;
 }
-#colorSelecter{
+#colorSelector{
     width: 80px;
     height: 80px;
     border: none;
 }
-#colorSelecter::-webkit-color-swatch-wrapper {
+#colorSelector::-webkit-color-swatch-wrapper {
     padding: 0;
 }  
-#colorSelecter::-webkit-color-swatch {
+#colorSelector::-webkit-color-swatch {
     border: none;
     border-radius: 50px;
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.71);
@@ -86,7 +86,7 @@ button{
     padding: 8px;
 }
 
-button:hover, #colorSelecter:hover{
+button:hover, #colorSelector:hover{
     transform: scale(1.1);
 }
 
