@@ -1,8 +1,9 @@
-const blackBtn = document.querySelector("#blackBtn");
+const colorMode = document.querySelector("#colorMode");
 const rainbowBtn = document.querySelector("#rainbowBtn");
 const eraserBtn = document.querySelector("#eraserBtn");
 const clearBtn = document.querySelector("#clearBtn");
 const toggleGridBtn = document.querySelector("#toggleGridBtn");
+const colorSelecter = document.querySelector("#colorSelecter");
 
 const sizeSlider = document.querySelector('#sizeSlider');
 const sliderValue = document.querySelector('#sliderValue');
@@ -11,7 +12,9 @@ const sketchBoard = document.querySelector("#sketchContainer");
 
 // Default Information
 let boardSize = 16;
-let penColor = 'black';
+let penColor = 'black'; //This tracks what color will be used to draw
+let selectedColor = 'black'; //This tracks which color is selected by the colorPicker at all times
+let colorSetting = 'colorMode' //This tracks which color setting is activated, (colorMode, rainbow, or eraser)
 let mouseIsDown = false;
 
 //Create the board
@@ -63,12 +66,10 @@ function getRandomColor() {
 }
 
 function paintCell(cell){
-    if(penColor === 'black'){
-        cell.target.style.backgroundColor = 'black';
-    }else if(penColor === 'eraser'){
-        cell.target.style.backgroundColor = 'white';
-    }else{
+    if(colorSetting === 'rainbow'){
         cell.target.style.backgroundColor = getRandomColor();
+    }else{
+        cell.target.style.backgroundColor = penColor;
     }
 }
 
@@ -76,25 +77,34 @@ function paintCell(cell){
 
 
 /*------------------------------Button Event Listeners (Start)-------------------*/
-blackBtn.addEventListener('click', ()=>{
-    penColor = 'black';
-    blackBtn.style.backgroundColor = 'rgb(92, 210, 166)';
+colorSelecter.addEventListener('input', function() {
+    selectedColor = colorSelecter.value;
+    if(colorSetting === 'colorMode'){
+        penColor = selectedColor;
+    }
+});
+colorMode.addEventListener('click', ()=>{
+    penColor = selectedColor;
+    colorSetting = 'colorMode';
+    colorMode.style.backgroundColor = 'rgb(169, 169, 169)';
     rainbowBtn.style.backgroundColor = 'rgb(255, 255, 255)';
     eraserBtn.style.backgroundColor = 'rgb(255, 255, 255)';
 });
 
 rainbowBtn.addEventListener('click', ()=>{
     penColor = 'rainbow';
-    blackBtn.style.backgroundColor = 'rgb(255, 255, 255)';
-    rainbowBtn.style.backgroundColor = 'rgb(92, 210, 166)';
+    colorSetting = 'rainbow';
+    colorMode.style.backgroundColor = 'rgb(255, 255, 255)';
+    rainbowBtn.style.backgroundColor = 'rgb(169, 169, 169)';
     eraserBtn.style.backgroundColor = 'rgb(255, 255, 255)';
 });
 
 eraserBtn.addEventListener('click', ()=>{
-    penColor = 'eraser';
-    blackBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+    penColor = 'white';
+    colorSetting = 'eraser';
+    colorMode.style.backgroundColor = 'rgb(255, 255, 255)';
     rainbowBtn.style.backgroundColor = 'rgb(255, 255, 255)';
-    eraserBtn.style.backgroundColor = 'rgb(92, 210, 166)';
+    eraserBtn.style.backgroundColor = 'rgb(169, 169, 169)';
 });
 
 clearBtn.addEventListener('click', ()=>{
@@ -123,5 +133,5 @@ document.addEventListener('DOMContentLoaded', () => {
     //When Page Loads create board
     createBoard(boardSize);
     //And black is default pen color selected
-    blackBtn.style.backgroundColor = 'rgb(92, 210, 166)';
+    colorMode.style.backgroundColor = 'rgb(169, 169, 169)';
 });

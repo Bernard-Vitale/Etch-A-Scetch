@@ -3,7 +3,7 @@
     user-select: none;
 }
 body{
-    background-image: linear-gradient(to right, rgb(102, 214, 168) , rgb(97, 90, 215));
+    background-color: rgb(152, 152, 152);
     height: 100%;
 }
 footer{
@@ -29,6 +29,7 @@ footer{
     display: flex;
     margin: 2em;
     justify-content: center;
+    align-items: center;
     gap: 5em;
     width: 100%;
 }
@@ -38,41 +39,83 @@ footer{
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.71);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 3em;
+    gap: 2em;
     height: 35em;
-    padding: 20px;
+    padding: 35px;
 }
 #sketchContainer{
     border: 50px solid rgb(96, 91, 91);    
-    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.71);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.71);
     border-radius: 20px;
     width: 30em;
     height: 30em;
     display: grid;
     cursor: crosshair;
 }
+
+#colorSelecterContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+#selectColorTitle{
+    margin: 0px;
+    font-size: 1.3em;
+}
+#colorSelecter{
+    width: 80px;
+    height: 80px;
+    border: none;
+}
+#colorSelecter::-webkit-color-swatch-wrapper {
+    padding: 0;
+}  
+#colorSelecter::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.71);
+}
 button{
-    border-radius: 10px;
+    border-radius: 20px;
     background-color:rgb(255, 255, 255);
     width: 10em;
-    height: 2em;
     font-size: 1em;
+    padding: 8px;
 }
 
-button:hover{
-    transform: scale(1.05);
+button:hover, #colorSelecter:hover{
+    transform: scale(1.1);
 }
 
 #clearBtn:active, #toggleGridBtn:active{
-    background-color: rgb(92, 210, 166);
+    background-color: rgb(169, 169, 169);
 }
 
 #sizeChangerContainer{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
-
+#sizeSlider{
+    -webkit-appearance: none; /* For WebKit/Blink based browsers */
+    -moz-appearance: none; /* For Firefox */
+    appearance: none;    background-color: rgb(250, 250, 250);
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 0.5em;
+}
+#sizeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+    background: rgb(96, 91, 91);
+}
+  
 #githubIcon{
     height: 2em;
 }
