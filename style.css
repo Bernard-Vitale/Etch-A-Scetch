@@ -134,6 +134,9 @@ button:hover, #colorSelector:hover{
 .hideGridLines {
     border: none;
 }
+
+/* Media Queries Start */
+
 @media (max-width: 1000px) {
     #contentContainer{
         gap: 3em;
