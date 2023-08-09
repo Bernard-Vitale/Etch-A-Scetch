@@ -28,31 +28,38 @@ footer{
 #contentContainer{
     display: flex;
     margin: 2em;
+    margin-right: 0em;
+    margin-left: 0em;
     justify-content: center;
     align-items: center;
     gap: 5em;
     width: 100%;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
 }
+
 #optionsContainer{
     border: 2px solid black;
     background-color: rgb(241, 234, 234);
     box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.71);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     gap: 1em;
     height: 35em;
     padding: 35px;
+
 }
 #sketchContainer{
-    border: 50px solid rgb(96, 91, 91);    
+    border: 45px solid rgb(96, 91, 91);    
     box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.71);
     border-radius: 20px;
     width: 30em;
     height: 30em;
     display: grid;
     cursor: crosshair;
+    flex-shrink: 0;
 }
 
 #colorSelectorContainer{
@@ -126,4 +133,105 @@ button:hover, #colorSelector:hover{
 }
 .hideGridLines {
     border: none;
+}
+@media (max-width: 1000px) {
+    #contentContainer{
+        gap: 3em;
+    }
+}
+
+@media (max-width: 900px){
+
+    #sketchContainer {
+        width: 26em;
+        height: 26em;
+        border: 40px solid rgb(96, 91, 91);    
+    }
+
+    #optionsContainer{
+        width: 7em;
+    }
+
+    button{
+        border-radius: 20px;
+        background-color:rgb(255, 255, 255);
+        width: 8em;
+        font-size: 0.9em;
+        padding: 6px;
+    }
+
+    #selectColorTitle{
+        margin: 0px;
+        font-size: 1.0em;
+    }
+
+}
+
+@media (max-width: 810px){
+    #sketchContainer {
+        width: 22em;
+        height: 22em;
+        border: 30px solid rgb(96, 91, 91);    
+    }
+
+    #optionsContainer{
+        width: 6em;
+    }
+
+    #selectColorTitle{
+        margin: 0px;
+        font-size: 0.9em;
+    }
+
+}
+
+@media (max-width: 700px){
+    #contentContainer{
+        flex-wrap: wrap-reverse;
+    } 
+}
+
+@media (max-width: 570px){
+    #title{
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 460px){
+    #sketchContainer {
+        width: 350px;
+        height: 350px;
+    }
+    #title{
+        font-size: 2.3em;
+    }
+
+}
+@media (max-width: 440px){
+    #sketchContainer {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 370px){
+    #sketchContainer {
+        width: 225px;
+        height: 225px;
+    }
+
+    @media (max-width: 570px){
+        #title{
+            font-size: 1.8em;
+        }
+    }   
+
+}
+
+@media (max-width: 300px){
+    #sketchContainer {
+        width: 175px;
+        height: 175px;
+    }
+
 }

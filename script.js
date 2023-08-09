@@ -13,8 +13,8 @@ const sketchBoard = document.querySelector("#sketchContainer");
 
 // Default Information
 let boardSize = 16;
-let penColor = 'black'; //This tracks what color will be used to draw
-let selectedColor = 'black'; //This tracks which color is selected by the colorPicker at all times
+let penColor = '#000000'; //This tracks what color will be used to draw
+let selectedColor = '00000'; //This tracks which color is selected by the colorPicker at all times
 let colorSetting = 'colorMode' //This tracks which color setting is activated, (colorMode, rainbow, or eraser)
 let mouseIsDown = false;
 
@@ -56,6 +56,7 @@ document.addEventListener('mouseup', () => {
     mouseIsDown = false;
 });
 
+
 function getRandomColor() {
     const red = Math.floor(Math.random() * 255);
     const green = Math.floor(Math.random() * 255);
@@ -71,9 +72,10 @@ function paintCell(cell){
         if(cell.target.style.backgroundColor === ""){
             selectedColor = "white";
             colorSelector.value = '#ffffff';
+        }else{
+            selectedColor = cell.target.style.backgroundColor;
+            colorSelector.value = rgbToHex(cell.target.style.backgroundColor);
         }
-        selectedColor = cell.target.style.backgroundColor;
-        colorSelector.value = rgbToHex(cell.target.style.backgroundColor);
     }else if(colorSetting === 'rainbow'){
         cell.target.style.backgroundColor = getRandomColor();
     }else{
@@ -83,7 +85,7 @@ function paintCell(cell){
 
 function rgbToHex(rgbColor) {
     const rgbArray = rgbColor.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-  
+
     if (rgbArray === null) {
       return "#ffffff";
     }
