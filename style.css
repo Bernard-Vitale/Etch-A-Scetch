@@ -231,10 +231,15 @@ button:hover, #colorSelector:hover{
 
 }
 
+@media (max-width: 320px){
+     #title{
+        font-size: 1.6em;
+    }
+}
+
 @media (max-width: 300px){
     #sketchContainer {
         width: 175px;
         height: 175px;
     }
-
 }
