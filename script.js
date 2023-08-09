@@ -1,5 +1,6 @@
 const colorMode = document.querySelector("#colorMode");
 const rainbowBtn = document.querySelector("#rainbowBtn");
+const colorFillBtn = document.querySelector("#colorFillBtn");
 const eraserBtn = document.querySelector("#eraserBtn");
 const eyeDropperBtn = document.querySelector("#eyeDropperBtn");
 const clearBtn = document.querySelector("#clearBtn");
@@ -78,6 +79,12 @@ function paintCell(cell){
         }
     }else if(colorSetting === 'rainbow'){
         cell.target.style.backgroundColor = getRandomColor();
+    }else if(colorSetting === 'colorFill'){
+        const pixels = document.querySelectorAll(".gridCell");
+        pixels.forEach(pixel => {
+            pixel.style.backgroundColor = penColor;
+        });
+
     }else{
         cell.target.style.backgroundColor = penColor;
     }
@@ -108,7 +115,7 @@ function rgbToHex(rgbColor) {
 /*------------------------------Button Event Listeners (Start)-------------------*/
 colorSelector.addEventListener('input', function() {
     selectedColor = colorSelector.value;
-    if(colorSetting === 'colorMode'){
+    if(colorSetting === 'colorMode' || colorSetting === 'colorFill'){
         penColor = selectedColor;
     }
 });
@@ -117,6 +124,7 @@ colorMode.addEventListener('click', ()=>{
     colorSetting = 'colorMode';
     colorMode.style.backgroundColor = 'rgb(169, 169, 169)';
     rainbowBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+    colorFillBtn.style.backgroundColor = 'rgb(255, 255, 255)';
     eraserBtn.style.backgroundColor = 'rgb(255, 255, 255)';
     eyeDropperBtn.style.backgroundColor = 'rgb(255, 255, 255)';
 });
@@ -126,6 +134,17 @@ rainbowBtn.addEventListener('click', ()=>{
     colorSetting = 'rainbow';
     colorMode.style.backgroundColor = 'rgb(255, 255, 255)';
     rainbowBtn.style.backgroundColor = 'rgb(169, 169, 169)';
+    colorFillBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+    eraserBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+    eyeDropperBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+});
+
+colorFillBtn.addEventListener('click', ()=>{
+    colorSetting = 'colorFill';
+    penColor = selectedColor;
+    colorMode.style.backgroundColor = 'rgb(255, 255, 255)';
+    rainbowBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+    colorFillBtn.style.backgroundColor = 'rgb(169, 169, 169)';
     eraserBtn.style.backgroundColor = 'rgb(255, 255, 255)';
     eyeDropperBtn.style.backgroundColor = 'rgb(255, 255, 255)';
 });
@@ -135,6 +154,7 @@ eraserBtn.addEventListener('click', ()=>{
     colorSetting = 'eraser';
     colorMode.style.backgroundColor = 'rgb(255, 255, 255)';
     rainbowBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+    colorFillBtn.style.backgroundColor = 'rgb(255, 255, 255)';
     eraserBtn.style.backgroundColor = 'rgb(169, 169, 169)';
     eyeDropperBtn.style.backgroundColor = 'rgb(255, 255, 255)';
 });
@@ -142,6 +162,7 @@ eyeDropperBtn.addEventListener('click', ()=>{
     colorSetting = 'eyeDropper';
     colorMode.style.backgroundColor = 'rgb(255, 255, 255)';
     rainbowBtn.style.backgroundColor = 'rgb(255, 255, 255)';
+    colorFillBtn.style.backgroundColor = 'rgb(255, 255, 255)';
     eraserBtn.style.backgroundColor = 'rgb(255, 255, 255)';
     eyeDropperBtn.style.backgroundColor = 'rgb(169, 169, 169)';
 });
