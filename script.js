@@ -13,8 +13,8 @@ const sketchBoard = document.querySelector("#sketchContainer");
 
 // Default Information
 let boardSize = 16;
-let penColor = '#000000'; //This tracks what color will be used to draw
-let selectedColor = '00000'; //This tracks which color is selected by the colorPicker at all times
+let penColor = 'rgb(0,0,0)'; //This tracks what color will be used to draw
+let selectedColor = 'rgb(0,0,0)'; //This tracks which color is selected by the colorPicker at all times
 let colorSetting = 'colorMode' //This tracks which color setting is activated, (colorMode, rainbow, or eraser)
 let mouseIsDown = false;
 
