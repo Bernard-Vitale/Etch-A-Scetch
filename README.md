@@ -6,6 +6,7 @@ This project is a part of The Odin Project's curriculum. You can find the inform
 This website allows you to:
 - Select any color you want to draw with.
 - Use "Rainbow Mode", which randomizes the color of every pixel you draw.
+- Use "Color Fill" to change the color of every pixel to the selected color.
 - Use an Eraser to erase the pixels you have already drawn.
 - Use an Eye Dropper Tool, to select the exact color of a pixel that is on the drawing.
 - Clear the pixel grid completely and have a fresh start.
