@@ -232,14 +232,14 @@ button:hover, #colorSelector:hover{
         height: 225px;
     }
     #title{
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
 }
 
 @media (max-width: 320px){
      #title{
-        font-size: 1.6em;
+        font-size: 1.45em;
     }
 }
 
