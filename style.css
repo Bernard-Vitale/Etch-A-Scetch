@@ -24,6 +24,7 @@ footer{
     font-size: 4em;
     margin: 0px;
     margin-bottom: 20px;
+    white-space: nowrap;
 }
 #contentContainer{
     display: flex;
