@@ -148,8 +148,6 @@ button:hover, #colorSelector:hover{
 @media (max-width: 900px){
 
     #sketchContainer {
-        width: 26em;
-        height: 26em;
         border: 40px solid rgb(96, 91, 91);    
     }
 
@@ -174,8 +172,6 @@ button:hover, #colorSelector:hover{
 
 @media (max-width: 810px){
     #sketchContainer {
-        width: 22em;
-        height: 22em;
         border: 30px solid rgb(96, 91, 91);    
     }
 
@@ -188,12 +184,17 @@ button:hover, #colorSelector:hover{
         font-size: 0.9em;
     }
 
-}
-
-@media (max-width: 700px){
     #contentContainer{
         flex-wrap: wrap-reverse;
     } 
+
+}
+
+@media (max-width: 600px){
+    #sketchContainer {
+        width: 24em;
+        height: 24em;
+    }
 }
 
 @media (max-width: 570px){
@@ -202,7 +203,7 @@ button:hover, #colorSelector:hover{
     }
 }
 
-@media (max-width: 460px){
+@media (max-width: 470px){
     #sketchContainer {
         width: 350px;
         height: 350px;
@@ -228,7 +229,7 @@ button:hover, #colorSelector:hover{
     
 }
 
-@media (max-width: 370px){
+@media (max-width: 380px){
     #sketchContainer {
         width: 225px;
         height: 225px;
@@ -245,7 +246,7 @@ button:hover, #colorSelector:hover{
     }
 }
 
-@media (max-width: 300px){
+@media (max-width: 320px){
     #sketchContainer {
         width: 175px;
         height: 175px;
