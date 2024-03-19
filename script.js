@@ -33,7 +33,7 @@ function createBoard(boardSize){
         const cell = document.createElement('div');
         cell.classList.add('gridCell');
         cell.addEventListener('mouseover', handleCellHover);
-        cell.addEventListener('click', handleCellClick);
+        // cell.addEventListener('click', handleCellClick);
         cell.addEventListener('mousedown', handleCellClick);
         sketchBoard.appendChild(cell);
     }
@@ -45,13 +45,15 @@ function handleCellHover(event) {
         paintCell(event);
     }
 }
+function handleMouseDown(event) {
+    mouseIsDown = true;
+}
 function handleCellClick(event){
     paintCell(event);
 }
 
-document.addEventListener('mousedown', () => {
-    mouseIsDown = true;
-});
+document.addEventListener('mousedown', handleMouseDown);
+
 
 document.addEventListener('mouseup', () => {
     mouseIsDown = false;
